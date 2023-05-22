@@ -13,7 +13,7 @@ pipeline {
 	stage('test') {
 		steps {
 			sh "fileContent < cat date.txt"
-			sh "$fileContent = *"2023"* && echo "Correct Year!""
+			sh "$fileContent = *'2023'* && echo 'Correct Year'"
 		}
 	}
     }
