@@ -7,9 +7,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        saveAndPrintDate("test")
+        saveAndPrintDate("date1.txt")
         sh "sleep 10s"
-        saveAndPrintDate("test2")
+        saveAndPrintDate("date2.txt")
       }
     }
   }
