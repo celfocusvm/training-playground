@@ -12,7 +12,7 @@ pipeline {
     	}
 	stage('test') {
 		steps {
-			sh "variable=$(cat date.txt) = *'2023'* && echo 'Correct Year'"
+			sh "cat date.txt = *'2023'* && echo 'Correct Year'"
 		}
 	}
     }
