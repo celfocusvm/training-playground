@@ -1,5 +1,5 @@
 pipeline {
-    agent any { 
+    agent { 
 		docker { 
 			image 'alpine:latest' 
 		}
@@ -10,7 +10,7 @@ pipeline {
     stages {
     	stage ('build') {
 		when {
-			equals expected: build, actual: ${params.CHOICE}
+			equals expected: "build", actual: "${params.CHOICE}"
 		}
 		steps {
 			echo "Build stage running"
@@ -18,7 +18,7 @@ pipeline {
 	}
 	stage ('test') {
 		when {
-			equals expected: test, actual: ${params.CHOICE}
+			equals expected: "test", actual: "${params.CHOICE}"
 		}
 		steps {
 			echo "Test stage running"
