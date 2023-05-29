@@ -1,7 +1,7 @@
 pipeline {
     agent none
     stages {
-    	stage{
+    	stage ('java') {
 	    agent {
     		dockerfile {
             		dir '003 - Defining Execution Environments'
@@ -12,7 +12,7 @@ pipeline {
 	    	sh "mvn −version"
 	    }
 	}
-	stage{
+	stage ('node') {
 	    agent {
     		dockerfile {
             		dir '003 - Defining Execution Environments'
