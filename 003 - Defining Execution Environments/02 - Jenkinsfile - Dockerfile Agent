@@ -9,8 +9,6 @@ pipeline {
         stage('build') {
             steps {
                 sh 'if [ "$ENV_VARIABLE" != "Value for execution" ]; then exit 1; fi'
-
-            	sh "apk add curl"
                 sh "curl www.google.com"
             }
         }
