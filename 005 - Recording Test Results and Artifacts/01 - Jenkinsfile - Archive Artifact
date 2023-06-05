@@ -9,8 +9,7 @@ pipeline {
         stage('build') {
             steps {
                 sh "curl www.google.com"
-                sh "touch google.html"
-                archiveArtifacts artifacts: 'google.html'
+                archiveArtifacts artifacts: '*.txt'
             }
         }
     }
