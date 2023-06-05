@@ -9,7 +9,7 @@ pipeline {
         stage('tests') {
             steps {
                 sh "mvn clean install -f '005 - Recording Test Results and Artifacts/04 - Publish in Nexus/pom.xml'"
-		sh "mvn clean deploy:deploy-file -Durl=http://nexus:8081/repository/maven-releases/ -Dfile '005 - Recording Test Results and Artifacts/04 - Publish in Nexus/target'"
+		sh "mvn clean deploy:deploy-file -Durl=http://nexus:8081/repository/maven-releases/ -Dfile '005 - Recording Test Results and Artifacts/04 - Publish in Nexus/target' -DgroupId=training -DartifactId=training-Raphael -Dpackaging=jar -Dversion=1.0.0 -DrepositoryId=maven-releases"
             }
         }
     }
