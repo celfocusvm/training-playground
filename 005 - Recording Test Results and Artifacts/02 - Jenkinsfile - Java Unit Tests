@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage('tests') {
             steps {
-                sh "mvn compile '005 - Recording Test Results and Artifacts/02 - Java Unit Tests'"
+	    	sh "cd 005 - Recording Test Results and Artifacts/02 - Java Unit Tests"
+                sh "mvn compile"
             }
         }
     }
