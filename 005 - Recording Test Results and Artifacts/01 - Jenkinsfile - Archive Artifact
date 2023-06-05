@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh "curl www.google.com"
-                archiveArtifacts artifacts: 'google.html'
+                sh "curl -o google.html www.google.com"
+                archiveArtifacts artifacts: '*.html'
             }
         }
     }
