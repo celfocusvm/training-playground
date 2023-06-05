@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('tests') {
             steps {
-                sh ""
+                sh "mvn clean install -f '005 - Recording Test Results and Artifacts/04 - Publish in Nexus/pom.xml'"
             }
         }
     }
