@@ -8,7 +8,7 @@ pipeline {
         stage('tests') {
             steps {
                 sh "mvn clean install -f '005 - Recording Test Results and Artifacts/03 - Sonar Integration/pom.xml'"
-		sh "mvn sonar:sonar -Dsonar.host.url=http://sonarqube:9000"
+		sh "mvn sonar:sonar -f '005 - Recording Test Results and Artifacts/03 - Sonar Integration/pom.xml' -Dsonar.host.url=http://sonarqube:9000"
             }
         }
     }
